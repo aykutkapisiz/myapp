@@ -1,0 +1,28 @@
+<div id="section1">
+	<h1 class="col-md-12">Section 1 Contents</h1>
+	<div class="owl-carousel">
+		<div class="slide-item col-md-12" ng-repeat="item in slides" slides-directive>
+			<div class="si-media">
+				<a href="{{ item.url }}" title="{{ item.title }}">
+					<img ng-src='{{ item.mediaUrl }}' alt="{{ item.title }}" />
+				</a>
+			</div>
+			<div class="si-title">
+				<p>
+					<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div id="section2">
+	<h2>Section 2 Contents</h2>
+	<ul>
+		<li ng-repeat="item in lightbox" class="col-md-2 col-sm-4 col-6" lightbox-directive>
+			<a href='{{ item.media["image_Photoshop"] }}' title="{{ item.title }}" data-index="{{$index}}" data-fancybox>
+				<img ng-src='{{ item.media["100x100"] }}' alt="{{ item.title }}" />
+			</a>
+		</li>
+	</ul>
+</div>
